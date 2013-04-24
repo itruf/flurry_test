@@ -17,7 +17,10 @@
 		01BA98BE1728396400B6B2F4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BA98BD1728396400B6B2F4 /* Default@2x.png */; };
 		01BA98C01728396400B6B2F4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BA98BF1728396400B6B2F4 /* Default-568h@2x.png */; };
 		01BA98C31728396400B6B2F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BA98C21728396400B6B2F4 /* ViewController.m */; };
-		01BA98C61728396400B6B2F4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BA98C41728396400B6B2F4 /* ViewController.xib */; };
+		01BA98CE17283A8200B6B2F4 /* CityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BA98CD17283A8200B6B2F4 /* CityViewController.m */; };
+		01BA98D117283C5700B6B2F4 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BA98D017283C5700B6B2F4 /* libFlurry.a */; };
+		01BA98D517283D0100B6B2F4 /* CountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BA98D417283D0100B6B2F4 /* CountryViewController.m */; };
+		01BA98D717283E0800B6B2F4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BA98D617283E0800B6B2F4 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +39,13 @@
 		01BA98BF1728396400B6B2F4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		01BA98C11728396400B6B2F4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		01BA98C21728396400B6B2F4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		01BA98C51728396400B6B2F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		01BA98CC17283A8200B6B2F4 /* CityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityViewController.h; sourceTree = "<group>"; };
+		01BA98CD17283A8200B6B2F4 /* CityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityViewController.m; sourceTree = "<group>"; };
+		01BA98CF17283C5700B6B2F4 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		01BA98D017283C5700B6B2F4 /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
+		01BA98D317283D0100B6B2F4 /* CountryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryViewController.h; sourceTree = "<group>"; };
+		01BA98D417283D0100B6B2F4 /* CountryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryViewController.m; sourceTree = "<group>"; };
+		01BA98D617283E0800B6B2F4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,9 +53,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01BA98D717283E0800B6B2F4 /* SystemConfiguration.framework in Frameworks */,
 				01BA98AA1728396400B6B2F4 /* UIKit.framework in Frameworks */,
 				01BA98AC1728396400B6B2F4 /* Foundation.framework in Frameworks */,
 				01BA98AE1728396400B6B2F4 /* CoreGraphics.framework in Frameworks */,
+				01BA98D117283C5700B6B2F4 /* libFlurry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +84,7 @@
 		01BA98A81728396400B6B2F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01BA98D617283E0800B6B2F4 /* SystemConfiguration.framework */,
 				01BA98A91728396400B6B2F4 /* UIKit.framework */,
 				01BA98AB1728396400B6B2F4 /* Foundation.framework */,
 				01BA98AD1728396400B6B2F4 /* CoreGraphics.framework */,
@@ -83,11 +95,15 @@
 		01BA98AF1728396400B6B2F4 /* flurry_test */ = {
 			isa = PBXGroup;
 			children = (
+				01BA98D217283C5A00B6B2F4 /* Flurry */,
 				01BA98B81728396400B6B2F4 /* AppDelegate.h */,
 				01BA98B91728396400B6B2F4 /* AppDelegate.m */,
 				01BA98C11728396400B6B2F4 /* ViewController.h */,
 				01BA98C21728396400B6B2F4 /* ViewController.m */,
-				01BA98C41728396400B6B2F4 /* ViewController.xib */,
+				01BA98CC17283A8200B6B2F4 /* CityViewController.h */,
+				01BA98CD17283A8200B6B2F4 /* CityViewController.m */,
+				01BA98D317283D0100B6B2F4 /* CountryViewController.h */,
+				01BA98D417283D0100B6B2F4 /* CountryViewController.m */,
 				01BA98B01728396400B6B2F4 /* Supporting Files */,
 			);
 			path = flurry_test;
@@ -105,6 +121,15 @@
 				01BA98BF1728396400B6B2F4 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01BA98D217283C5A00B6B2F4 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				01BA98CF17283C5700B6B2F4 /* Flurry.h */,
+				01BA98D017283C5700B6B2F4 /* libFlurry.a */,
+			);
+			name = Flurry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,7 +187,6 @@
 				01BA98BC1728396400B6B2F4 /* Default.png in Resources */,
 				01BA98BE1728396400B6B2F4 /* Default@2x.png in Resources */,
 				01BA98C01728396400B6B2F4 /* Default-568h@2x.png in Resources */,
-				01BA98C61728396400B6B2F4 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +200,8 @@
 				01BA98B61728396400B6B2F4 /* main.m in Sources */,
 				01BA98BA1728396400B6B2F4 /* AppDelegate.m in Sources */,
 				01BA98C31728396400B6B2F4 /* ViewController.m in Sources */,
+				01BA98CE17283A8200B6B2F4 /* CityViewController.m in Sources */,
+				01BA98D517283D0100B6B2F4 /* CountryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,14 +214,6 @@
 				01BA98B31728396400B6B2F4 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		01BA98C41728396400B6B2F4 /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01BA98C51728396400B6B2F4 /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -263,6 +281,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "flurry_test/flurry_test-Prefix.pch";
 				INFOPLIST_FILE = "flurry_test/flurry_test-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/flurry_test\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -274,6 +296,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "flurry_test/flurry_test-Prefix.pch";
 				INFOPLIST_FILE = "flurry_test/flurry_test-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/flurry_test\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

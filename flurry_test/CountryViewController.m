@@ -7,26 +7,22 @@
 //
 
 #import "CountryViewController.h"
-
-@interface CountryViewController ()
-
-@end
+#import "Flurry.h"
 
 @implementation CountryViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	
+	self.view.backgroundColor = [UIColor whiteColor];
+	
+	titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height-40)/2, 320, 40)];
+	titleLabel.textAlignment = NSTextAlignmentCenter;
+	titleLabel.text = _countryName;
+	[self.view addSubview:titleLabel];
+	
+	[Flurry logPageView];
 }
 
 - (void)didReceiveMemoryWarning

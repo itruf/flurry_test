@@ -10,13 +10,20 @@
 
 #import "ViewController.h"
 
+#import "Flurry.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	
+	//Flurry
+	[Flurry startSession:@"PRFW86B6383BKXVGSK2S"];
+	
     // Override point for customization after application launch.
-	self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+	ViewController *view = [[ViewController alloc] initWithStyle:UITableViewStylePlain];
+	self.viewController = [[UINavigationController alloc] initWithRootViewController:view];
 	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

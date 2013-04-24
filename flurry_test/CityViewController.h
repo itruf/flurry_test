@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CityViewController : UIViewController
-
+@interface CityViewController : UIViewController {
+	UILabel *titleLabel;
+}
+@property (nonatomic, strong) NSString *cityName;
 @end

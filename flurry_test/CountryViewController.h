@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CountryViewController : UIViewController
-
+@interface CountryViewController : UIViewController {
+	UILabel *titleLabel;
+}
+@property (nonatomic, strong) NSString *countryName;
 @end
