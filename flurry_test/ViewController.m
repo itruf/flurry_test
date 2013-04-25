@@ -64,7 +64,7 @@
 		[self.navigationController pushViewController:cityView animated:YES];
 	} else if (indexPath.section == 1) {
 		CountryViewController *countryView = [[CountryViewController alloc] init];
-		countryView.countryName = cities[indexPath.row];
+		countryView.countryName = countries[indexPath.row];
 		[self.navigationController pushViewController:countryView animated:YES];
 	}
 }
