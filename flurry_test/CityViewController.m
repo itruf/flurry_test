@@ -22,7 +22,11 @@
 	titleLabel.text = _cityName;
 	[self.view addSubview:titleLabel];
 	
+	//Просто счетчик (На весь апп)
 	[Flurry logPageView];
+	
+	//Конкретный View
+	[Flurry logEvent:@"opened_city"];
 }
 
 - (void)didReceiveMemoryWarning

@@ -22,8 +22,11 @@
 	titleLabel.text = _countryName;
 	[self.view addSubview:titleLabel];
 	
+	//Просто счетчик (На весь апп)
 	[Flurry logPageView];
-}
+	
+	//Конкретный View
+	[Flurry logEvent:@"opened_country"];}
 
 - (void)didReceiveMemoryWarning
 {

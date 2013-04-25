@@ -22,7 +22,11 @@
 	cities = @[@"Moscow", @"London",@"New york", @"Berlin"];
 	countries = @[@"Russia", @"Great Britain", @"USA", @"Germany"];
 	
+	//Просто счетчик (На весь апп)
 	[Flurry logPageView];
+	
+	//Конкретный View
+	[Flurry logEvent:@"opened_list"];
 }
 
 - (int) numberOfSectionsInTableView:(UITableView *)tableView {
