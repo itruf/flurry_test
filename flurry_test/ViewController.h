@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@interface CityTableViewCell : UITableViewCell
+
+@end
+
+@interface CountryTableViewCell : UITableViewCell
+
+@end
+
 @interface ViewController : UITableViewController {
 	NSArray *cities;
 	NSArray *countries;

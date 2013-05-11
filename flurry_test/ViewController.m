@@ -11,6 +11,31 @@
 #import "CountryViewController.h"
 #import "Flurry.h"
 
+@implementation CountryTableViewCell
+
+- (id) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+	self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+	if (self) {
+		[self.contentView setBackgroundColor:[UIColor redColor]];
+	}
+	return self;
+}
+
+@end
+
+
+@implementation CityTableViewCell
+
+- (id) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+	self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+	if (self) {
+		[self.contentView setBackgroundColor:[UIColor blueColor]];
+	}
+	return self;
+}
+
+@end
+
 @implementation ViewController
 
 - (void)viewDidLoad
@@ -49,15 +74,23 @@
 	return @"Unknown";
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"place"];
-	if (!cell) {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"place"];
-	}
+	UITableViewCell *cell;
+	
 	if (indexPath.section == 0) {
+		cell = [tableView dequeueReusableCellWithIdentifier:@"city"];
+		if (!cell) {
+			cell = [[CityTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"city"];
+		}
 		cell.textLabel.text = cities[indexPath.row];
 	} else if (indexPath.section == 1) {
+		cell = [tableView dequeueReusableCellWithIdentifier:@"country"];
+		if (!cell) {
+			cell = [[CountryTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"country"];
+		}
+		
 		cell.textLabel.text = countries[indexPath.row];
 	}
+	
 	return cell;
 }
 
