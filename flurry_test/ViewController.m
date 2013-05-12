@@ -50,7 +50,7 @@
 	
 	self.title = @"Navigation";
 	
-	cities = @[@"Moscow", @"London",@"New york", @"Berlin",@"Afghanistan",];
+	cities = @[@"Moscow", @"London",@"New york", @"Berlin"];
 	countries = @[@"Russia", @"Great Britain", @"USA", @"Germany"];
 	
 	//Просто счетчик (На весь апп)
