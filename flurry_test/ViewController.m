@@ -20,13 +20,32 @@
 	self.title = @"Navigation";
 	
 	cities = @[@"Moscow", @"London",@"New york", @"Berlin"];
-	countries = @[@"Russia", @"Great Britain", @"USA", @"Germany"];
+	countries = [self generateCountries];
 	
 	//Просто счетчик (На весь апп)
 	[Flurry logPageView];
 	
 	//Конкретный View
 	[Flurry logEvent:@"opened_list"];
+}
+
+- (NSArray *) generateCountries {
+	NSLocale *locale = [NSLocale currentLocale];
+	NSArray *countryArray = [NSLocale ISOCountryCodes];
+	
+	NSMutableArray *sortedCountryArray = [[NSMutableArray alloc] init];
+	
+	for (NSString *countryCode in countryArray) {
+		
+		NSString *displayNameString = [locale displayNameForKey:NSLocaleCountryCode value:countryCode];
+		[sortedCountryArray addObject:displayNameString];
+		
+	}
+	
+	
+	[sortedCountryArray sortUsingSelector:@selector(localizedCompare:)];
+	
+	return sortedCountryArray;
 }
 
 - (int) numberOfSectionsInTableView:(UITableView *)tableView {
