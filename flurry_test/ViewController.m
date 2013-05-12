@@ -16,7 +16,10 @@
 - (id) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
 	self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
 	if (self) {
-		[self.contentView setBackgroundColor:[UIColor redColor]];
+		[self setSelectionStyle:UITableViewCellSelectionStyleGray];
+		
+		[self.textLabel setTextAlignment:NSTextAlignmentRight];
+		[self.textLabel setTextColor:[UIColor lightGrayColor]];
 	}
 	return self;
 }
@@ -29,7 +32,10 @@
 - (id) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
 	self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
 	if (self) {
-		[self.contentView setBackgroundColor:[UIColor blueColor]];
+		[self.textLabel setBackgroundColor:[UIColor clearColor]];
+		[self.textLabel setTextColor:[UIColor whiteColor]];
+		
+		[self.contentView setBackgroundColor:[UIColor lightGrayColor]];
 	}
 	return self;
 }
@@ -44,7 +50,7 @@
 	
 	self.title = @"Navigation";
 	
-	cities = @[@"Moscow", @"London",@"New york", @"Berlin"];
+	cities = @[@"Moscow", @"London",@"New york", @"Berlin",@"Afghanistan",];
 	countries = @[@"Russia", @"Great Britain", @"USA", @"Germany"];
 	
 	//Просто счетчик (На весь апп)
