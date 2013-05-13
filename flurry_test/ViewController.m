@@ -61,7 +61,7 @@
 }
 
 - (NSArray *) generateCountries {
-	NSLocale *locale = [NSLocale currentLocale];
+	NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
 	NSArray *countryArray = [NSLocale ISOCountryCodes];
 	
 	NSMutableArray *sortedCountryArray = [[NSMutableArray alloc] init];

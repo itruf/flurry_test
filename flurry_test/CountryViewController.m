@@ -26,7 +26,8 @@
 	[Flurry logPageView];
 	
 	//Конкретный View
-	[Flurry logEvent:@"opened_country"];}
+	[Flurry logEvent:@"opened_country" withParameters:@{@"country": _countryName}];
+}
 
 - (void)didReceiveMemoryWarning
 {
