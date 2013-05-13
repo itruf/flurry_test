@@ -26,7 +26,7 @@
 	[Flurry logPageView];
 	
 	//Конкретный View
-	[Flurry logEvent:@"opened_city"];
+	[Flurry logEvent:@"opened_city" withParameters:@{@"city": _cityName}];
 }
 
 - (void)didReceiveMemoryWarning
